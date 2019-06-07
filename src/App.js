@@ -1,6 +1,7 @@
 import React from 'react';
+import TodoHeader from './components/TodoComponents/TodoHeader';
+import TodoForm from './components/TodoComponents/TodoForm';
 
-const TodoHeading = props => <h1>{props.message}!</h1>;
 
 
 class App extends React.Component {
@@ -10,13 +11,18 @@ class App extends React.Component {
       message: "Todo List: MVP"
     };
   }
+
+  // messageChangeHandler = event => {
+  //   this.setState({message: event.target.value});
+  // };
   // you will need a place to store your state in this component.
   // design `App` to be the parent component of your application.
   // this component is going to take care of state, and any change handlers you need to work with your state
   render() {
     return (
       <div>
-        <TodoHeading message={this.state.message}/>
+        <TodoHeader message={this.state.message}/>
+        <TodoForm />
       </div>
     );
   }
