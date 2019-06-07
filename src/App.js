@@ -1,6 +1,8 @@
 import React from 'react';
 import TodoHeader from './components/TodoComponents/TodoHeader';
 import TodoForm from './components/TodoComponents/TodoForm';
+import Todo from './components/TodoComponents/Todo';
+
 
 
 
@@ -23,6 +25,7 @@ class App extends React.Component {
       <div>
         <TodoHeader message={this.state.message}/>
         <TodoForm />
+        <Todo />
       </div>
     );
   }
